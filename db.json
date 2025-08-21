@@ -1,0 +1,92 @@
+{
+  "product": [
+    {
+      "categoryId": "9ee9",
+      "subcategoryId": "dcd5",
+      "p_name": "foldable chair",
+      "p_price": "5500",
+      "createdAt": "2025-08-19T05:22:10.928Z",
+      "updatedAt": "2025-08-21T06:34:15.614Z",
+      "id": "8559"
+    },
+    {
+      "categoryId": "54d7",
+      "subcategoryId": "1b86",
+      "p_name": "Mini van",
+      "p_price": "1500",
+      "createdAt": "2025-08-21T05:18:18.378Z",
+      "updatedAt": "2025-08-21T06:38:49.990Z",
+      "id": "107a"
+    },
+    {
+      "categoryId": "b96a",
+      "subcategoryId": "6642",
+      "p_name": "Apple",
+      "p_price": "497",
+      "createdAt": "2025-08-21T05:21:58.271Z",
+      "updatedAt": "2025-08-21T06:32:53.796Z",
+      "id": "738d"
+    },
+    {
+      "categoryId": "b96a",
+      "subcategoryId": "6642",
+      "p_name": "Banana",
+      "p_price": "50",
+      "createdAt": "2025-08-21T06:37:54.601Z",
+      "updatedAt": "2025-08-21T06:38:15.683Z",
+      "id": "63af"
+    }
+  ],
+  "category": [
+    {
+      "category": "woodens",
+      "createdAt": "2025-08-18T06:09:08.014Z",
+      "updatedAt": "2025-08-21T06:22:50.469Z",
+      "id": "9ee9"
+    },
+    {
+      "category": "foods",
+      "createdAt": "2025-08-21T06:18:29.672Z",
+      "updatedAt": "2025-08-21T06:23:02.709Z",
+      "id": "b96a"
+    },
+    {
+      "id": "88d9",
+      "category": "electronic ",
+      "createdAt": "2025-08-21T06:23:21.469Z"
+    },
+    {
+      "category": "plastics",
+      "createdAt": "2025-08-21T06:23:28.568Z",
+      "updatedAt": "2025-08-21T06:23:35.143Z",
+      "id": "54d7"
+    }
+  ],
+  "subcategory": [
+    {
+      "id": "6642",
+      "categoryId": "b96a",
+      "subcategory": "fruit",
+      "createdAt": "2025-08-21T06:26:42.655Z"
+    },
+    {
+      "categoryId": "9ee9",
+      "subcategory": "chair",
+      "createdAt": "2025-08-21T06:26:52.671Z",
+      "updatedAt": "2025-08-21T06:27:19.904Z",
+      "id": "dcd5"
+    },
+    {
+      "id": "8a76",
+      "categoryId": "88d9",
+      "subcategory": "vehicle",
+      "createdAt": "2025-08-21T06:27:03.081Z"
+    },
+    {
+      "id": "1b86",
+      "categoryId": "54d7",
+      "subcategory": "toys",
+      "createdAt": "2025-08-21T06:27:11.147Z"
+    }
+  ]
+}
