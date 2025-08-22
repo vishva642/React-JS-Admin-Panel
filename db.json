@@ -35,6 +35,39 @@
       "createdAt": "2025-08-21T06:37:54.601Z",
       "updatedAt": "2025-08-21T06:38:15.683Z",
       "id": "63af"
+    },
+    {
+      "id": "3342",
+      "categoryId": "9ee9",
+      "p_name": "foldable table",
+      "p_price": "10000",
+      "subcategoryId": "a80a",
+      "createdAt": "2025-08-22T04:37:14.011Z"
+    },
+    {
+      "id": "968b",
+      "categoryId": "88d9",
+      "p_name": "dell laptop",
+      "p_price": "65000",
+      "subcategoryId": "6ce4",
+      "createdAt": "2025-08-22T04:37:44.755Z"
+    },
+    {
+      "id": "c4ac",
+      "categoryId": "54d7",
+      "p_name": "barbie set",
+      "p_price": "500",
+      "subcategoryId": "1b86",
+      "createdAt": "2025-08-22T04:40:09.362Z"
+    },
+    {
+      "categoryId": "9ee9",
+      "subcategoryId": "dcd5",
+      "p_name": "study table",
+      "p_price": "480",
+      "createdAt": "2025-08-22T05:38:28.057Z",
+      "updatedAt": "2025-08-22T05:40:15.104Z",
+      "id": "350a"
     }
   ],
   "category": [
@@ -60,6 +93,11 @@
       "createdAt": "2025-08-21T06:23:28.568Z",
       "updatedAt": "2025-08-21T06:23:35.143Z",
       "id": "54d7"
+    },
+    {
+      "id": "b7b6",
+      "category": "food2",
+      "createdAt": "2025-08-21T07:02:14.128Z"
     }
   ],
   "subcategory": [
@@ -87,6 +125,48 @@
       "categoryId": "54d7",
       "subcategory": "toys",
       "createdAt": "2025-08-21T06:27:11.147Z"
+    },
+    {
+      "id": "a80a",
+      "categoryId": "9ee9",
+      "subcategory": "table",
+      "createdAt": "2025-08-22T04:34:48.535Z"
+    },
+    {
+      "id": "ffc3",
+      "categoryId": "9ee9",
+      "subcategory": "furniture",
+      "createdAt": "2025-08-22T04:35:01.210Z"
+    },
+    {
+      "id": "8031",
+      "categoryId": "b96a",
+      "subcategory": "vegetable",
+      "createdAt": "2025-08-22T04:35:10.175Z"
+    },
+    {
+      "id": "4758",
+      "categoryId": "b96a",
+      "subcategory": "dry fruits",
+      "createdAt": "2025-08-22T04:35:30.700Z"
+    },
+    {
+      "id": "6ce4",
+      "categoryId": "88d9",
+      "subcategory": "device",
+      "createdAt": "2025-08-22T04:35:48.252Z"
+    },
+    {
+      "id": "ab95",
+      "categoryId": "54d7",
+      "subcategory": "modal",
+      "createdAt": "2025-08-22T04:36:08.503Z"
+    },
+    {
+      "id": "d829",
+      "categoryId": "b7b6",
+      "subcategory": "packet",
+      "createdAt": "2025-08-22T04:36:29.068Z"
     }
   ]
 }
