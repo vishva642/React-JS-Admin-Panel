@@ -1,11 +1,28 @@
+import axios from "axios"
 import { useState } from "react"
 
 const Login = () => {
 
-    // const [email, setEmail] = useState()
-    // const [password , setPassword] = useState()
+    const [email, setEmail] = useState()
+    const [password , setPassword] = useState()
 
-    
+    const handleSubmit = () => {
+      const payload = {
+        email : email,
+        password : password
+      }
+      // console.log("output : ", payload) 
+      axios.post('https://api.escuelajs.co/api/v1/auth/login', payload)
+      .then((res)=>{
+        localStorage.setItem("Token access",JSON.stringify(res.data.access_token))
+        alert("Login success!!!")
+        console.log("Login successfully",res)
+      })
+      .catch((err)=>{
+        alert("Login failed!!")
+        console.log("Login Failed!",err)
+      })
+    }
 
   return (
     <>
@@ -13,14 +30,14 @@ const Login = () => {
         <p className="font-semibold text-lg text-center">Login Page</p>
         <div>
             <p>Email</p>
-            <input type="email" className="border rounded-md shadow-md" placeholder="Enter Your Email-ID"/>
+            <input onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control border rounded-md shadow-md" placeholder="Enter Your Email-ID"/>
         </div>
         <div>
             <p>Password</p>
-            <input type="password" className="border rounded-md shadow-md" placeholder="Enter Your Password"/>
+            <input onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control border rounded-md shadow-md" placeholder="Enter Your Password"/>
         </div>
         <div>
-            <button className="bg-blue-600 px-4 py-1 rounded-md shadow-md text-white">Login</button>
+            <button onClick={handleSubmit} className="btn btn-outline-primary rounded-md shadow-md my-2">Login</button>
         </div>
       </div>
     </>

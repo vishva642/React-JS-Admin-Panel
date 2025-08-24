@@ -16,6 +16,7 @@ const AddProduct = React.lazy(()=>import('./views/product/AddProduct'))
 const ViewProduct = React.lazy(()=>import('./views/product/ViewProduct'))
 const UpdateProduct = React.lazy(()=>import('./views/product/AddProduct'))
 const Login = React.lazy(()=>import('./views/pages/login/Login'))
+const Profile = React.lazy(()=>import('./views/pages/profile/profile'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -36,7 +37,8 @@ const routes = [
   { path: '/product/view', name: 'View', element: ViewProduct},
   { path: '/product/update/:id', name: 'View', element: UpdateProduct},
 
-  { path: '/login', name:'Login', element: Login}
+  { path: '/login', name:'Login', element: Login},
+  { path: '/profile', name:'Profile', element: Profile}
 
 ]
 

@@ -105,6 +105,11 @@ const _nav = [
       },
       {
         component: CNavItem,
+        name: 'Profile',
+        to: '/profile',
+      },
+      {
+        component: CNavItem,
         name: 'Register',
         to: '/register',
       },

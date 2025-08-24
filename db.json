@@ -68,6 +68,15 @@
       "createdAt": "2025-08-22T05:38:28.057Z",
       "updatedAt": "2025-08-22T05:40:15.104Z",
       "id": "350a"
+    },
+    {
+      "categoryId": "fd6b",
+      "subcategoryId": "47c0",
+      "p_name": "fabric blue-asthetic shirt",
+      "p_price": "500",
+      "createdAt": "2025-08-24T08:14:22.103Z",
+      "updatedAt": "2025-08-24T08:14:34.402Z",
+      "id": "527d"
     }
   ],
   "category": [
@@ -98,6 +107,11 @@
       "id": "b7b6",
       "category": "food2",
       "createdAt": "2025-08-21T07:02:14.128Z"
+    },
+    {
+      "id": "fd6b",
+      "category": "clothes",
+      "createdAt": "2025-08-24T08:13:19.663Z"
     }
   ],
   "subcategory": [
@@ -167,6 +181,18 @@
       "categoryId": "b7b6",
       "subcategory": "packet",
       "createdAt": "2025-08-22T04:36:29.068Z"
+    },
+    {
+      "id": "47c0",
+      "categoryId": "fd6b",
+      "subcategory": "shirt",
+      "createdAt": "2025-08-24T08:13:40.935Z"
+    },
+    {
+      "id": "6075",
+      "categoryId": "fd6b",
+      "subcategory": "t-shirt",
+      "createdAt": "2025-08-24T08:16:29.520Z"
     }
   ]
 }
