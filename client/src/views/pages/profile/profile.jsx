@@ -1,5 +1,4 @@
 import axios from 'axios'
-import React from 'react'
 
 const profile = () => {
 
@@ -31,7 +30,7 @@ const profile = () => {
     <>
       <h1>This is Profile</h1>
       <button className='btn btn-outline-dark' onClick={getProfileData}>Get Profile Data</button>
-      <button className='btn btn-outline-light' onClick={handleLogout}>Get Profile Data</button>
+      <button className='btn btn-outline-light' onClick={handleLogout}>Log Out</button>
       <div>
         <p>Role : </p>
         <p>Name : </p>
