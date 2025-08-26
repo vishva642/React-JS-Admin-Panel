@@ -1,43 +1,57 @@
 import axios from 'axios'
+import { useState } from 'react'
 
-const profile = () => {
+const Profile = () => {
+  const [userData, setuserData] = useState()
 
-    const getProfileData = () => {
+  console.log(userData)
 
-        const token = JSON.parse(localStorage.getItem('token'))
+  const getProfileData = () => {
+    const token = JSON.parse(localStorage.getItem('token'))
 
-        const header = {
-            headers : {
-                Authorization : `Bearer ${token}`
-            }
-        }
-    
-        axios.get('https://api.escuelajs.co/api/v1/auth/profile', header)
-        .then((res)=>{
-            console.log("profile data",res)
-        })
-        .catch((err)=>{
-            console.log("error occured",err)
-        })
+    const header = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     }
 
-    const handleLogout = () => {
-        localStorage.removeItem('token')
-        alert("Logout Successfully!")
-    }
+    axios
+      .get('https://api.escuelajs.co/api/v1/auth/profile', header)
+      .then((res) => {
+        setuserData(res.data)
+        console.log('profile data', res)
+      })
+      .catch((err) => {
+        alert("You are not logged in!!")
+        console.log('error occured', err)
+      })
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    alert('Logout Successfully!')
+  }
 
   return (
     <>
       <h1>This is Profile</h1>
-      <button className='btn btn-outline-dark' onClick={getProfileData}>Get Profile Data</button>
-      <button className='btn btn-outline-light' onClick={handleLogout}>Log Out</button>
-      <div>
-        <p>Role : </p>
-        <p>Name : </p>
-        <p>Email : </p>
-      </div>
+      <button className="btn btn-outline-dark mx-1" onClick={getProfileData}>
+        Get Profile Data
+      </button>
+      <button className="btn btn-outline-dark" onClick={handleLogout}>
+        Log Out
+      </button>
+
+      {userData && (
+        <div>
+          <p>Name : {userData?.name || 'N/A'} </p>
+          <p>Email : {userData?.email || 'N/A'} </p>
+          <p>Role : {userData?.role || 'N/A'} </p>
+          <img className="rounded-full h-20 w-20" src={userData?.avatar} alt="" />
+        </div>
+      )}
     </>
   )
 }
 
-export default profile
+export default Profile
