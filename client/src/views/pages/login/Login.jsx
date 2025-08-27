@@ -1,11 +1,12 @@
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
 
     const [email, setEmail] = useState()
     const [password , setPassword] = useState()
-
+    const redirect = useNavigate()
     const handleSubmit = () => {
       const payload = {
         email : email,
@@ -14,8 +15,9 @@ const Login = () => {
       // console.log("output : ", payload) 
       axios.post('https://api.escuelajs.co/api/v1/auth/login', payload)
       .then((res)=>{
-        localStorage.setItem("Token access",JSON.stringify(res.data.access_token))
+        localStorage.setItem("token",res.data.access_token)
         alert("Login success!!!")
+        redirect("/")
         console.log("Login successfully",res)
       })
       .catch((err)=>{
