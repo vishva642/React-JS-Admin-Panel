@@ -77,6 +77,14 @@
       "createdAt": "2025-08-24T08:14:22.103Z",
       "updatedAt": "2025-08-24T08:14:34.402Z",
       "id": "527d"
+    },
+    {
+      "id": "9fa6",
+      "categoryId": "8bdc",
+      "subcategoryId": "20d9",
+      "p_name": "mango juice ",
+      "p_price": "125",
+      "createdAt": "2025-09-02T08:49:13.300Z"
     }
   ],
   "category": [
@@ -112,6 +120,11 @@
       "id": "fd6b",
       "category": "clothes",
       "createdAt": "2025-08-24T08:13:19.663Z"
+    },
+    {
+      "id": "8bdc",
+      "category": "drink",
+      "createdAt": "2025-09-02T08:22:24.166Z"
     }
   ],
   "subcategory": [
@@ -193,6 +206,12 @@
       "categoryId": "fd6b",
       "subcategory": "t-shirt",
       "createdAt": "2025-08-24T08:16:29.520Z"
+    },
+    {
+      "id": "20d9",
+      "categoryId": "8bdc",
+      "subcategory": "juice",
+      "createdAt": "2025-09-02T08:48:53.118Z"
     }
   ]
 }

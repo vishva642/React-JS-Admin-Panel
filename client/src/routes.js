@@ -1,5 +1,6 @@
 // import { element } from 'prop-types'
-import React, { Children } from 'react'
+
+import React from 'react'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 
@@ -17,13 +18,10 @@ const ViewProduct = React.lazy(()=>import('./views/product/ViewProduct'))
 const UpdateProduct = React.lazy(()=>import('./views/product/AddProduct'))
 const Login = React.lazy(()=>import('./views/pages/login/Login'))
 const Profile = React.lazy(()=>import('./views/pages/profile/profile'))
-const Privateroute = React.lazy(()=>import('./views/privateroute/PrivateRoute'))
 
 const routes = [
   { path: '/login', name:'Login', element: Login},
-  {
-    element:Privateroute,
-    Children : [
+  
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   
@@ -44,9 +42,8 @@ const routes = [
 
   { path: '/profile', name:'Profile', element: Profile}
     ]
-  }
+  
 
-]
 
 export default routes
 
