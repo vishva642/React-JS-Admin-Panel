@@ -20,7 +20,7 @@
     },
     {
       "categoryId": "b96a",
-      "subcategoryId": "6642",
+      "subcategoryId": null,
       "p_name": "Apple",
       "p_price": "497",
       "createdAt": "2025-08-21T05:21:58.271Z",
@@ -29,7 +29,7 @@
     },
     {
       "categoryId": "b96a",
-      "subcategoryId": "6642",
+      "subcategoryId": null,
       "p_name": "Banana",
       "p_price": "50",
       "createdAt": "2025-08-21T06:37:54.601Z",
@@ -85,6 +85,22 @@
       "p_name": "mango juice ",
       "p_price": "125",
       "createdAt": "2025-09-02T08:49:13.300Z"
+    },
+    {
+      "id": "3387",
+      "categoryId": "b96a",
+      "subcategoryId": "8031",
+      "p_name": "Tomatoes",
+      "p_price": "150",
+      "createdAt": "2025-09-03T05:57:03.145Z"
+    },
+    {
+      "id": "94ef",
+      "categoryId": "8bdc",
+      "subcategoryId": "eb3e",
+      "p_name": "chocolate milkshake",
+      "p_price": "75",
+      "createdAt": "2025-09-03T06:24:00.265Z"
     }
   ],
   "category": [
@@ -128,12 +144,6 @@
     }
   ],
   "subcategory": [
-    {
-      "id": "6642",
-      "categoryId": "b96a",
-      "subcategory": "fruit",
-      "createdAt": "2025-08-21T06:26:42.655Z"
-    },
     {
       "categoryId": "9ee9",
       "subcategory": "chair",
@@ -212,6 +222,12 @@
       "categoryId": "8bdc",
       "subcategory": "juice",
       "createdAt": "2025-09-02T08:48:53.118Z"
+    },
+    {
+      "id": "eb3e",
+      "categoryId": "8bdc",
+      "subcategory": "milkshake",
+      "createdAt": "2025-09-03T06:23:33.385Z"
     }
   ]
 }
