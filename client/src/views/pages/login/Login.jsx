@@ -1,48 +1,85 @@
-import axios from "axios"
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import {
+  CButton,
+  CCard,
+  CCardBody,
+  CCardGroup,
+  CCol,
+  CContainer,
+  CForm,
+  CFormInput,
+  CInputGroup,
+  CInputGroupText,
+  CRow,
+} from '@coreui/react'
+import CIcon from '@coreui/icons-react'
+import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Login = () => {
-
-    const [email, setEmail] = useState()
-    const [password , setPassword] = useState()
-    const redirect = useNavigate()
-    const handleSubmit = () => {
-      const payload = {
-        email : email,
-        password : password
-      }
-      // console.log("output : ", payload) 
-      axios.post('https://api.escuelajs.co/api/v1/auth/login', payload)
-      .then((res)=>{
-        localStorage.setItem("token",res.data.access_token)
-        alert("Login success!!!")
-        redirect("/")
-        console.log("Login successfully",res)
-      })
-      .catch((err)=>{
-        alert("Login failed!!")
-        console.log("Login Failed!",err)
-      })
-    }
-
   return (
-    <>
-      <div className="bg-sky-200 space-y-4 p-5 rounded-md shadow-md m-10 w-72">
-        <p className="font-semibold text-lg text-center">Login Page</p>
-        <div>
-            <p>Email</p>
-            <input onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control border rounded-md shadow-md" placeholder="Enter Your Email-ID"/>
-        </div>
-        <div>
-            <p>Password</p>
-            <input onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control border rounded-md shadow-md" placeholder="Enter Your Password"/>
-        </div>
-        <div>
-            <button onClick={handleSubmit} className="btn btn-outline-primary rounded-md shadow-md my-2">Login</button>
-        </div>
-      </div>
-    </>
+    <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
+      <CContainer>
+        <CRow className="justify-content-center">
+          <CCol md={8}>
+            <CCardGroup>
+              <CCard className="p-4">
+                <CCardBody>
+                  <CForm>
+                    <h1>Login</h1>
+                    <p className="text-body-secondary">Sign In to your account</p>
+                    <CInputGroup className="mb-3">
+                      <CInputGroupText>
+                        <CIcon icon={cilUser} />
+                      </CInputGroupText>
+                      <CFormInput placeholder="Username" autoComplete="username" />
+                    </CInputGroup>
+                    <CInputGroup className="mb-4">
+                      <CInputGroupText>
+                        <CIcon icon={cilLockLocked} />
+                      </CInputGroupText>
+                      <CFormInput
+                        type="password"
+                        placeholder="Password"
+                        autoComplete="current-password"
+                      />
+                    </CInputGroup>
+                    <CRow>
+                      <CCol xs={6}>
+                        <CButton color="primary" className="px-4">
+                          Login
+                        </CButton>
+                      </CCol>
+                      <CCol xs={6} className="text-right">
+                        <CButton color="link" className="px-0">
+                          Forgot password?
+                        </CButton>
+                      </CCol>
+                    </CRow>
+                  </CForm>
+                </CCardBody>
+              </CCard>
+              <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>
+                <CCardBody className="text-center">
+                  <div>
+                    <h2>Sign up</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <Link to="/register">
+                      <CButton color="primary" className="mt-3" active tabIndex={-1}>
+                        Register Now!
+                      </CButton>
+                    </Link>
+                  </div>
+                </CCardBody>
+              </CCard>
+            </CCardGroup>
+          </CCol>
+        </CRow>
+      </CContainer>
+    </div>
   )
 }
 

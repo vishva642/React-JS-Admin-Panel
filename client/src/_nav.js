@@ -4,6 +4,7 @@ import {
   cilPuzzle,
   cilSpeedometer,
   cilStar,
+  
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -89,7 +90,7 @@ const _nav = [
       
     ],
   },
-  {
+   {
     component: CNavTitle,
     name: 'Extras',
   },
@@ -102,11 +103,6 @@ const _nav = [
         component: CNavItem,
         name: 'Login',
         to: '/login',
-      },
-      {
-        component: CNavItem,
-        name: 'Profile',
-        to: '/profile',
       },
       {
         component: CNavItem,
@@ -130,7 +126,7 @@ const _nav = [
     name: 'Docs',
     href: 'https://coreui.io/react/docs/templates/installation/',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
-  },
+  }
 ]
 
 export default _nav
