@@ -7,20 +7,12 @@ It includes *JWT authentication* and *product management features* like *categor
 
 ## ✨ Features
 
-### 🔑 Authentication
-- Login with JWT token (using [EscuelaJS API](https://api.escuelajs.co/))
-- Fetch user profile after login
-- Show profile avatar in header
-- Logout functionality (token removed, redirect to login)
-
 ### 📦 Product Management
 - 📂 *Categories* → Add, View, Update, Delete  
 - 📂 *Subcategories* → Linked to categories  
 - 🛒 *Products* → Add product with category & subcategory mapping  
 - 💰 Price handling in *Rupees (₹)*  
 - 📊 Dashboard shows total categories, subcategories & products  
-
----
 
 ## 🛠 Tech Stack
 
@@ -30,18 +22,6 @@ It includes *JWT authentication* and *product management features* like *categor
 - *CoreUI React* (UI Components & Styling)  
 - *LocalStorage* (Token & User data persistence)  
 
----
-
-## 🔐 Authentication Flow
-
-1. User logs in → POST /auth/login  
-2. Token saved in *localStorage*  
-3. Fetch profile → GET /auth/profile  
-4. Store user in *localStorage*  
-5. Redirect to *Dashboard*  
-
----
-
 ## 📦 Product Flow
 
 - *Category CRUD* (Add/Edit/Delete categories)  
@@ -49,4 +29,5 @@ It includes *JWT authentication* and *product management features* like *categor
 - *Product CRUD* (Add product with price, category & subcategory)  
 - All data fetched from *EscuelaJS API*  
 
----
+## 🖼️ Preview
+![mern-stack-admin-panel](https://github.com/user-attachments/assets/5d3c75fc-68cf-43ba-a251-b8afcdb8c821)
