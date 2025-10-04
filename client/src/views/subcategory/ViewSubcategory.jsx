@@ -124,7 +124,7 @@ const ViewSubcategory = () => {
       <table className="table table-striped table-hover table-bordered">
         <thead className="table-dark">
           <tr>
-            <th>#</th>
+            <th>No.</th>
             <th>Category</th>
             <th>SubCategory</th>
             <th>Created Date</th>
