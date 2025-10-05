@@ -89,7 +89,7 @@ const AddProduct = () => {
             // console.log(data)
             .then(() => {
               toast.success('✅ Product Updated!', { autoClose: 2000, transition: Flip })
-              redirect('/product/view')
+              redirect('/product/about')
             })
         })
         .catch((err) => console.log(err))
@@ -103,7 +103,7 @@ const AddProduct = () => {
         .then(() => {
           toast.success('✅ Product Added!', { autoClose: 2000, transition: Flip })
           reset()
-          redirect('/product/view')
+          redirect('/product/about')
         })
         .catch((err) => console.log(err))
     }

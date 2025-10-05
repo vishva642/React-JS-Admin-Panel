@@ -76,7 +76,7 @@ const AddSubCategory = () => {
             })
             .then(() => {
               // toast.success('✅ SubCategory Updated!', { autoClose: 2000, transition: Flip })
-              redirect('/subcategory/view')
+              redirect('/subcategory/about')
             })
         })
         .catch((err) => console.log(err))
@@ -90,7 +90,7 @@ const AddSubCategory = () => {
         .then(() => {
           // toast.success('✅ SubCategory Added!', { autoClose: 2000, transition: Flip })
           reset()
-          redirect('/subcategory/view')
+          redirect('/subcategory/about')
         })
         .catch((err) => console.log(err))
     }

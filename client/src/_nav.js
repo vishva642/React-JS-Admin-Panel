@@ -48,7 +48,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'View',
-        to: '/category/view',
+        to: '/category/about',
       }
     ],
   },
@@ -66,7 +66,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'View',
-        to: '/subcategory/view',
+        to: '/subcategory/about',
       },
       
     ],
@@ -85,7 +85,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'View',
-        to: '/product/view',
+        to: '/product/about',
       },
       
     ],

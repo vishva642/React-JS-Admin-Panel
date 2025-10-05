@@ -82,7 +82,7 @@ const AddProduct = () => {
       })
         .then(() => {
           toast.success("✅ Product Updated!", { autoClose: 2000, transition: Flip })
-          redirect("/product/view")
+          redirect("/product/about")
         })
     } else {
       axios.post(`${import.meta.env.VITE_API_URL}/product`, {
@@ -92,7 +92,7 @@ const AddProduct = () => {
         .then(() => {
           toast.success("✅ Product Added!", { autoClose: 2000, transition: Flip })
           reset()
-          redirect("/product/view")
+          redirect("/product/about")
         })
     }
   }

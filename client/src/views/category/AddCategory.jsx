@@ -59,7 +59,7 @@ const AddCategory = () => {
         .put(`${import.meta.env.VITE_API_URL}/category/${id}`, newData)
         .then(() => {
           // toast.success('✅ Category Updated!', { autoClose: 2000 })
-          redirect('/category/view')
+          redirect('/category/about')
         })
         .catch((err) => console.log(err))
     } else {
@@ -70,7 +70,7 @@ const AddCategory = () => {
         .then(() => {
           toast.success('✅ Category Added!', { autoClose: 2000 })
           reset()
-          redirect('/category/view')
+          redirect('/category/about')
         })
         .catch((err) => console.log(err))
     }
