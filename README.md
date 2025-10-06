@@ -13,15 +13,14 @@ It includes *product management features* like *categories, subcategories, and p
 - 🛒 *Products* → Add product with category & subcategory mapping  
 - 💰 Price handling in *Rupees (₹)*  
 - 📊 Dashboard shows total categories, subcategories & products
-
-  | Technology              | Purpose                  |
+  
+| Technology              | Purpose                  |
 | ----------------------- | ------------------------ |
 | ⚛️ **React.js**         | Frontend framework       |
 | 🧭 **React Router DOM** | Routing & Private Routes |
 | 🔁 **Redux / useState** | State Management         |
 | 🌐 **Axios**            | API Calls                |
 | 🎨 **CoreUI React**     | UI Components & Styling  |
-  
 
 ## 🛠 Tech Stack
 
