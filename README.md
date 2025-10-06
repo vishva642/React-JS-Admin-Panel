@@ -20,7 +20,6 @@ It includes *product management features* like *categories, subcategories, and p
 - *React Router DOM* (Routing & Private Routes)  
 - *Axios* (API Calls)  
 - *CoreUI React* (UI Components & Styling)  
-- *LocalStorage* (Token & User data persistence)  
 
 ## 📦 Product Flow
 
