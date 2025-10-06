@@ -1,4 +1,4 @@
-# 🛡 React Authentication & Product Management Dashboard
+# 🛡 React Product Management Dashboard
 
 This project is a *React.js dashboard* built with *CoreUI, React Router, Redux/State, and Axios*.  
 It includes *product management features* like *categories, subcategories, and products*.  
@@ -12,7 +12,16 @@ It includes *product management features* like *categories, subcategories, and p
 - 📂 *Subcategories* → Linked to categories  
 - 🛒 *Products* → Add product with category & subcategory mapping  
 - 💰 Price handling in *Rupees (₹)*  
-- 📊 Dashboard shows total categories, subcategories & products  
+- 📊 Dashboard shows total categories, subcategories & products
+
+  | Technology              | Purpose                  |
+| ----------------------- | ------------------------ |
+| ⚛️ **React.js**         | Frontend framework       |
+| 🧭 **React Router DOM** | Routing & Private Routes |
+| 🔁 **Redux / useState** | State Management         |
+| 🌐 **Axios**            | API Calls                |
+| 🎨 **CoreUI React**     | UI Components & Styling  |
+  
 
 ## 🛠 Tech Stack
 
