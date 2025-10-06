@@ -1,7 +1,7 @@
 # 🛡 React Authentication & Product Management Dashboard
 
 This project is a *React.js dashboard* built with *CoreUI, React Router, Redux/State, and Axios*.  
-It includes *JWT authentication* and *product management features* like *categories, subcategories, and products*.  
+It includes *product management features* like *categories, subcategories, and products*.  
 
 ---
 
