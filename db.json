@@ -1,90 +1,94 @@
 {
   "product": [
     {
-      "categoryId": "9ee9",
+      "categoryId": "52e2",
       "subcategoryId": "dcd5",
-      "p_name": "foldable chair",
+      "p_name": "Foldable Chair",
       "p_price": "5500",
       "createdAt": "2025-08-19T05:22:10.928Z",
-      "updatedAt": "2025-08-21T06:34:15.614Z",
+      "updatedAt": "2025-11-11T04:32:11.796Z",
       "id": "8559"
     },
     {
-      "categoryId": "54d7",
-      "subcategoryId": "1b86",
+      "categoryId": "1791",
+      "subcategoryId": "ab95",
       "p_name": "Mini van",
       "p_price": "1500",
       "createdAt": "2025-08-21T05:18:18.378Z",
-      "updatedAt": "2025-08-21T06:38:49.990Z",
+      "updatedAt": "2025-11-11T04:32:26.375Z",
       "id": "107a"
     },
     {
       "categoryId": "b96a",
-      "subcategoryId": null,
+      "subcategoryId": "8ccf",
       "p_name": "Apple",
       "p_price": "497",
       "createdAt": "2025-08-21T05:21:58.271Z",
-      "updatedAt": "2025-08-21T06:32:53.796Z",
+      "updatedAt": "2025-11-11T04:33:56.959Z",
       "id": "738d"
     },
     {
       "categoryId": "b96a",
-      "subcategoryId": null,
+      "subcategoryId": "8ccf",
       "p_name": "Banana",
       "p_price": "50",
       "createdAt": "2025-08-21T06:37:54.601Z",
-      "updatedAt": "2025-08-21T06:38:15.683Z",
+      "updatedAt": "2025-11-11T04:34:53.937Z",
       "id": "63af"
     },
     {
-      "id": "3342",
-      "categoryId": "9ee9",
-      "p_name": "foldable table",
-      "p_price": "10000",
+      "categoryId": "52e2",
       "subcategoryId": "a80a",
-      "createdAt": "2025-08-22T04:37:14.011Z"
+      "p_name": "Foldable Table",
+      "p_price": "10000",
+      "createdAt": "2025-08-22T04:37:14.011Z",
+      "updatedAt": "2025-11-11T04:36:04.066Z",
+      "id": "3342"
     },
     {
-      "id": "968b",
       "categoryId": "88d9",
-      "p_name": "dell laptop",
-      "p_price": "65000",
       "subcategoryId": "6ce4",
-      "createdAt": "2025-08-22T04:37:44.755Z"
+      "p_name": "Dell Laptop",
+      "p_price": "65000",
+      "createdAt": "2025-08-22T04:37:44.755Z",
+      "updatedAt": "2025-11-11T04:36:20.755Z",
+      "id": "968b"
     },
     {
-      "id": "c4ac",
-      "categoryId": "54d7",
-      "p_name": "barbie set",
-      "p_price": "500",
+      "categoryId": "1791",
       "subcategoryId": "1b86",
-      "createdAt": "2025-08-22T04:40:09.362Z"
+      "p_name": "Barbie Set",
+      "p_price": "500",
+      "createdAt": "2025-08-22T04:40:09.362Z",
+      "updatedAt": "2025-11-11T04:36:58.338Z",
+      "id": "c4ac"
     },
     {
-      "categoryId": "9ee9",
-      "subcategoryId": "dcd5",
-      "p_name": "study table",
+      "categoryId": "52e2",
+      "subcategoryId": "a80a",
+      "p_name": "Study Table",
       "p_price": "480",
       "createdAt": "2025-08-22T05:38:28.057Z",
-      "updatedAt": "2025-08-22T05:40:15.104Z",
+      "updatedAt": "2025-11-11T04:37:24.779Z",
       "id": "350a"
     },
     {
       "categoryId": "fd6b",
       "subcategoryId": "47c0",
-      "p_name": "fabric blue-asthetic shirt",
+      "p_name": "Fabric Blue-Aesthetic Shirt",
       "p_price": "500",
       "createdAt": "2025-08-24T08:14:22.103Z",
-      "updatedAt": "2025-08-24T08:14:34.402Z",
+      "updatedAt": "2025-11-11T04:37:54.677Z",
       "id": "527d"
     },
     {
-      "id": "9fa6",
       "categoryId": "8bdc",
       "subcategoryId": "20d9",
-      "p_name": "mango juice ",
+      "p_name": "Mango Juice ",
       "p_price": "125",
-      "createdAt": "2025-09-02T08:49:13.300Z"
+      "createdAt": "2025-09-02T08:49:13.300Z",
+      "updatedAt": "2025-11-11T04:39:40.566Z",
+      "id": "9fa6"
     },
     {
       "id": "3387",
@@ -95,144 +99,164 @@
       "createdAt": "2025-09-03T05:57:03.145Z"
     },
     {
-      "id": "94ef",
       "categoryId": "8bdc",
       "subcategoryId": "eb3e",
-      "p_name": "chocolate milkshake",
+      "p_name": "Chocolate Milkshake",
       "p_price": "75",
-      "createdAt": "2025-09-03T06:24:00.265Z"
+      "createdAt": "2025-09-03T06:24:00.265Z",
+      "updatedAt": "2025-11-11T04:31:49.097Z",
+      "id": "94ef"
+    },
+    {
+      "id": "4c6c",
+      "categoryId": "b96a",
+      "subcategoryId": "8031",
+      "p_name": "Potatoes",
+      "p_price": "40",
+      "createdAt": "2025-11-11T04:31:26.776Z"
     }
   ],
   "category": [
     {
-      "category": "woodens",
-      "createdAt": "2025-08-18T06:09:08.014Z",
-      "updatedAt": "2025-08-21T06:22:50.469Z",
-      "id": "9ee9"
-    },
-    {
-      "category": "foods",
+      "category": "Foods",
       "createdAt": "2025-08-21T06:18:29.672Z",
-      "updatedAt": "2025-08-21T06:23:02.709Z",
+      "updatedAt": "2025-11-11T04:26:55.302Z",
       "id": "b96a"
     },
     {
-      "id": "88d9",
-      "category": "electronic ",
-      "createdAt": "2025-08-21T06:23:21.469Z"
+      "category": "Electronic ",
+      "createdAt": "2025-08-21T06:23:21.469Z",
+      "updatedAt": "2025-11-11T04:26:30.822Z",
+      "id": "88d9"
     },
     {
-      "category": "plastics",
-      "createdAt": "2025-08-21T06:23:28.568Z",
-      "updatedAt": "2025-08-21T06:23:35.143Z",
-      "id": "54d7"
+      "category": "Clothes",
+      "createdAt": "2025-08-24T08:13:19.663Z",
+      "updatedAt": "2025-11-11T04:25:48.039Z",
+      "id": "fd6b"
     },
     {
-      "id": "b7b6",
-      "category": "food2",
-      "createdAt": "2025-08-21T07:02:14.128Z"
+      "category": "Drink",
+      "createdAt": "2025-09-02T08:22:24.166Z",
+      "updatedAt": "2025-11-11T04:27:05.049Z",
+      "id": "8bdc"
     },
     {
-      "id": "fd6b",
-      "category": "clothes",
-      "createdAt": "2025-08-24T08:13:19.663Z"
+      "category": "Wooden",
+      "createdAt": "2025-10-03T09:10:05.184Z",
+      "updatedAt": "2025-11-11T04:27:14.622Z",
+      "id": "52e2"
     },
     {
-      "id": "8bdc",
-      "category": "drink",
-      "createdAt": "2025-09-02T08:22:24.166Z"
-    },
-    {
-      "id": "52e2",
-      "category": "wooden",
-      "createdAt": "2025-10-03T09:10:05.184Z"
+      "id": "1791",
+      "category": "Plastic",
+      "createdAt": "2025-11-11T04:21:13.515Z"
     }
   ],
   "subcategory": [
     {
-      "categoryId": "9ee9",
-      "subcategory": "chair",
+      "categoryId": "52e2",
+      "subcategory": "Chair",
       "createdAt": "2025-08-21T06:26:52.671Z",
-      "updatedAt": "2025-08-21T06:27:19.904Z",
+      "updatedAt": "2025-11-11T04:28:12.155Z",
       "id": "dcd5"
     },
     {
-      "id": "8a76",
       "categoryId": "88d9",
-      "subcategory": "vehicle",
-      "createdAt": "2025-08-21T06:27:03.081Z"
+      "subcategory": "Vehicle",
+      "createdAt": "2025-08-21T06:27:03.081Z",
+      "updatedAt": "2025-11-11T04:28:22.317Z",
+      "id": "8a76"
     },
     {
-      "id": "1b86",
-      "categoryId": "54d7",
-      "subcategory": "toys",
-      "createdAt": "2025-08-21T06:27:11.147Z"
+      "categoryId": "1791",
+      "subcategory": "Toys",
+      "createdAt": "2025-08-21T06:27:11.147Z",
+      "updatedAt": "2025-11-11T04:32:40.468Z",
+      "id": "1b86"
     },
     {
-      "id": "a80a",
-      "categoryId": "9ee9",
-      "subcategory": "table",
-      "createdAt": "2025-08-22T04:34:48.535Z"
+      "categoryId": "52e2",
+      "subcategory": "Table",
+      "createdAt": "2025-08-22T04:34:48.535Z",
+      "updatedAt": "2025-11-11T04:28:39.172Z",
+      "id": "a80a"
     },
     {
-      "id": "ffc3",
-      "categoryId": "9ee9",
-      "subcategory": "furniture",
-      "createdAt": "2025-08-22T04:35:01.210Z"
+      "categoryId": "52e2",
+      "subcategory": "Furniture",
+      "createdAt": "2025-08-22T04:35:01.210Z",
+      "updatedAt": "2025-11-11T04:28:55.505Z",
+      "id": "ffc3"
     },
     {
-      "id": "8031",
       "categoryId": "b96a",
-      "subcategory": "vegetable",
-      "createdAt": "2025-08-22T04:35:10.175Z"
+      "subcategory": "Vegetable",
+      "createdAt": "2025-08-22T04:35:10.175Z",
+      "updatedAt": "2025-11-11T04:29:08.291Z",
+      "id": "8031"
     },
     {
-      "id": "4758",
       "categoryId": "b96a",
-      "subcategory": "dry fruits",
-      "createdAt": "2025-08-22T04:35:30.700Z"
+      "subcategory": "Dry Fruits",
+      "createdAt": "2025-08-22T04:35:30.700Z",
+      "updatedAt": "2025-11-11T04:29:21.632Z",
+      "id": "4758"
     },
     {
-      "id": "6ce4",
       "categoryId": "88d9",
-      "subcategory": "device",
-      "createdAt": "2025-08-22T04:35:48.252Z"
+      "subcategory": "Device",
+      "createdAt": "2025-08-22T04:35:48.252Z",
+      "updatedAt": "2025-11-11T04:29:33.069Z",
+      "id": "6ce4"
     },
     {
-      "id": "ab95",
-      "categoryId": "54d7",
-      "subcategory": "modal",
-      "createdAt": "2025-08-22T04:36:08.503Z"
+      "categoryId": "1791",
+      "subcategory": "Modal",
+      "createdAt": "2025-08-22T04:36:08.503Z",
+      "updatedAt": "2025-11-11T04:29:46.415Z",
+      "id": "ab95"
     },
     {
-      "id": "d829",
-      "categoryId": "b7b6",
-      "subcategory": "packet",
-      "createdAt": "2025-08-22T04:36:29.068Z"
+      "categoryId": "1791",
+      "subcategory": "Packet",
+      "createdAt": "2025-08-22T04:36:29.068Z",
+      "updatedAt": "2025-11-11T04:29:58.001Z",
+      "id": "d829"
     },
     {
-      "id": "47c0",
       "categoryId": "fd6b",
-      "subcategory": "shirt",
-      "createdAt": "2025-08-24T08:13:40.935Z"
+      "subcategory": "Shirt",
+      "createdAt": "2025-08-24T08:13:40.935Z",
+      "updatedAt": "2025-11-11T04:30:07.441Z",
+      "id": "47c0"
     },
     {
-      "id": "6075",
       "categoryId": "fd6b",
-      "subcategory": "t-shirt",
-      "createdAt": "2025-08-24T08:16:29.520Z"
+      "subcategory": "T-Shirt",
+      "createdAt": "2025-08-24T08:16:29.520Z",
+      "updatedAt": "2025-11-11T04:30:21.496Z",
+      "id": "6075"
     },
     {
-      "id": "20d9",
       "categoryId": "8bdc",
-      "subcategory": "juice",
-      "createdAt": "2025-09-02T08:48:53.118Z"
+      "subcategory": "Juice",
+      "createdAt": "2025-09-02T08:48:53.118Z",
+      "updatedAt": "2025-11-11T04:30:30.705Z",
+      "id": "20d9"
     },
     {
-      "id": "eb3e",
       "categoryId": "8bdc",
-      "subcategory": "milkshake",
-      "createdAt": "2025-09-03T06:23:33.385Z"
+      "subcategory": "Milkshake",
+      "createdAt": "2025-09-03T06:23:33.385Z",
+      "updatedAt": "2025-11-11T04:30:38.446Z",
+      "id": "eb3e"
+    },
+    {
+      "id": "8ccf",
+      "categoryId": "b96a",
+      "subcategory": "Fruits",
+      "createdAt": "2025-11-11T04:33:31.626Z"
     }
   ]
 }

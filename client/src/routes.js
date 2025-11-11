@@ -2,20 +2,20 @@
 
 import React from 'react'
 
-const Dashboard = React.lazy(() => import('./abouts/dashboard/Dashboard'))
+const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 
 // Base
-const Accordion = React.lazy(() => import('./abouts/base/accordion/Accordion'))
-const Cards = React.lazy(() => import('./abouts/base/cards/Cards'))
-const AddCategory = React.lazy(()=>import('./abouts/category/AddCategory'))
-const ViewCategory = React.lazy(()=>import('./abouts/category/aboutCategory'))
-const UpdateCategory = React.lazy(()=>import('./abouts/category/AddCategory'))
-const AddSubcategory = React.lazy(()=>import('./abouts/subcategory/AddSubcategory'))
-const ViewSubcategory = React.lazy(()=>import('./abouts/subcategory/aboutSubcategory'))
-const UpdateSubcategory = React.lazy(()=>import('./abouts/subcategory/AddSubcategory'))
-const AddProduct = React.lazy(()=>import('./abouts/product/AddProduct'))
-const ViewProduct = React.lazy(()=>import('./abouts/product/aboutProduct'))
-const UpdateProduct = React.lazy(()=>import('./abouts/product/AddProduct'))
+const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
+const Cards = React.lazy(() => import('./views/base/cards/Cards'))
+const AddCategory = React.lazy(() => import('./views/category/AddCategory'))
+const ViewCategory = React.lazy(() => import('./views/category/ViewCategory'))
+const UpdateCategory = React.lazy(()=>import('./views/category/AddCategory'))
+const AddSubcategory = React.lazy(()=>import('./views/subcategory/AddSubcategory'))
+const ViewSubcategory = React.lazy(()=>import('./views/subcategory/ViewSubcategory'))
+const UpdateSubcategory = React.lazy(()=>import('./views/subcategory/AddSubcategory'))
+const AddProduct = React.lazy(()=>import('./views/product/AddProduct'))
+const ViewProduct = React.lazy(()=>import('./views/product/ViewProduct'))
+const UpdateProduct = React.lazy(()=>import('./views/product/AddProduct'))
 
 const routes = [
   
@@ -35,7 +35,7 @@ const routes = [
 
   { path: '/product/add', name: 'Add', element: AddProduct},
   { path: '/product/about', name: 'View', element: ViewProduct},
-  { path: '/product/update/:id', name: 'View', element: UpdateProduct},
+  { path: '/product/update/:id', name: 'View', element: UpdateProduct}
 
 ]
   
