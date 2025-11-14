@@ -19,7 +19,7 @@ const AddSubCategory = () => {
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/category`)
-      .then((res) => setCategories(res.data))
+      .then((res) => setCategories(res.data.category))
       .catch((err) => console.log(err))
   }, [])
   useEffect(() => {
@@ -28,10 +28,10 @@ const AddSubCategory = () => {
         .get(`${import.meta.env.VITE_API_URL}/subcategory/${id}`)
         .then((res) => {
           reset({
-            categoryId: res.data.categoryId,
-            subcategory: res.data.subcategory,
+            cat_id: res.data.subcat.cat_id,
+            sub_cat: res.data.subcat.sub_cat,
           })
-          setCreatedAt(res.data.createdAt)
+          setCreatedAt(res.data.subcat.createdAt)
         })
         .catch((err) => console.log(err))
     }
@@ -41,7 +41,7 @@ const AddSubCategory = () => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/subcategory`)
       .then((res) => {
-        setSubcategories(res.data)
+        setSubcategories(res.data.records)
       })
       .catch((err) => console.log(err))
   }, [])
@@ -49,7 +49,7 @@ const AddSubCategory = () => {
   function subcat(data) {
     if (!id) {
       const isDuplicate = subcategories.find((cat) => {
-        return cat.subcategory.toLowerCase() == data.subcategory.toLowerCase()
+        return cat.sub_cat.toLowerCase() == data.sub_cat.toLowerCase()
       })
 
       if (isDuplicate) {
@@ -65,28 +65,25 @@ const AddSubCategory = () => {
 
     if (id) {
       // ✅ Update Mode
+      const updateData = {
+        cat_id: data.cat_id,
+        sub_cat: data.sub_cat
+      }
       axios
-        .get(`${import.meta.env.VITE_API_URL}/subcategory/${id}`) // pehle purana record lelo
+        .put(`${import.meta.env.VITE_API_URL}/subcategory/${id}`, updateData)
         .then(() => {
-          axios
-            .put(`${import.meta.env.VITE_API_URL}/subcategory/${id}`, {
-              ...data,
-              createdAt : createdAt,
-              updatedAt: new Date(),
-            })
-            .then(() => {
-              // toast.success('✅ SubCategory Updated!', { autoClose: 2000, transition: Flip })
-              redirect('/subcategory/about')
-            })
+          // toast.success('✅ SubCategory Updated!', { autoClose: 2000, transition: Flip })
+          redirect('/subcategory/about')
         })
         .catch((err) => console.log(err))
     } else {
       // ✅ Add Mode
+      const addData = {
+        cat_id: data.cat_id,
+        sub_cat: data.sub_cat
+      }
       axios
-        .post(`${import.meta.env.VITE_API_URL}/subcategory`, {
-          ...data,
-          createdAt: new Date(), // 👈 new record ke liye createdAt add
-        })
+        .post(`${import.meta.env.VITE_API_URL}/subcategory`, addData)
         .then(() => {
           // toast.success('✅ SubCategory Added!', { autoClose: 2000, transition: Flip })
           reset()
@@ -103,7 +100,7 @@ const AddSubCategory = () => {
         {/* Category Select */}
         <div className="mt-4">
           <select
-            {...register('categoryId', {
+            {...register('cat_id', {
               required: {
                 value: true,
                 message: 'Please Select Category',
@@ -113,19 +110,19 @@ const AddSubCategory = () => {
           >
             <option value="">-- Select Category --</option>
             {categories.map((cat) => (
-              <option key={cat.id} value={cat.id}>
-                {cat.category}
+              <option key={cat._id} value={cat._id}>
+                {cat.name}
               </option>
             ))}
           </select>
-          <p className="text-danger">{errors?.categoryId?.message}</p>
+          <p className="text-danger">{errors?.cat_id?.message}</p>
         </div>
 
         {/* SubCategory Input */}
         <div className="mt-4">
           <input
             type="text"
-            {...register('subcategory', {
+            {...register('sub_cat', {
               required: {
                 value: true,
                 message: 'Enter The Subcategory Name',
@@ -143,11 +140,11 @@ const AddSubCategory = () => {
             placeholder="Enter SubCategory Name"
             className="form-control"
           />
-          <p className="text-danger">{errors?.subcategory?.message}</p>
+          <p className="text-danger">{errors?.sub_cat?.message}</p>
         </div>
 
         <div className="mt-4">
-          <button className={`btn ${id ? 'btn-outline-warning' : 'btn-outline-success'}`}>
+          <button type="submit" className={`btn ${id ? 'btn-outline-warning' : 'btn-outline-success'}`}>
             {id ? 'Update' : 'Submit'}
           </button>
           <ToastContainer />

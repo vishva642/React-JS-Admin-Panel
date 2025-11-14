@@ -8,7 +8,7 @@ const ViewCategory = () => {
     const [categories,setCategories] = useState([])
     function showCategory(){
        axios.get(`${import.meta.env.VITE_API_URL}/category`)
-       .then(res=>setCategories(res.data))
+       .then(res=>setCategories(res.data.category))
        .catch(err=>console.log(err))
     }
     useEffect(()=>{
@@ -19,10 +19,10 @@ const ViewCategory = () => {
             axios.delete(`${import.meta.env.VITE_API_URL}/category/${id}`)
             .then(res=>{
                 console.log(res.data)
+                showCategory()
             })
             .catch(err=>console.log(err))
         }
-        showCategory()
     }
   return (
     <>
@@ -38,16 +38,16 @@ const ViewCategory = () => {
             </thead>
             <tbody>
                 {
-                    categories && categories.map(({id,category,createdAt, updatedAt},index)=>{
+                    categories && categories.map(({_id,name,createdAt, updatedAt},index)=>{
                         return(
-                            <tr key={id}>
+                            <tr key={_id}>
                             <td>{index+1}</td>
-                            <td>{category}</td>
+                            <td>{name}</td>
                             <td>{new Date(createdAt).toDateString()}</td>
                             <td>{new Date(updatedAt).toDateString()}</td>
                             <td>
-                                <button onClick={()=>trash(id)} className="btn btn-danger mx-1"><FaTrash/></button>
-                                <NavLink to={`/category/update/${id}`} className="btn btn-warning"><FaPencil/></NavLink>
+                                <button onClick={()=>trash(_id)} className="btn btn-danger mx-1"><FaTrash/></button>
+                                <NavLink to={`/category/update/${_id}`} className="btn btn-warning"><FaPencil/></NavLink>
                             </td>
                         </tr>
                         )
@@ -60,3 +60,4 @@ const ViewCategory = () => {
 }
 
 export default ViewCategory
+

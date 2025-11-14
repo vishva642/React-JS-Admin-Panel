@@ -15,8 +15,8 @@ const AddCategory = () => {
       axios
         .get(`${import.meta.env.VITE_API_URL}/category/${id}`)
         .then((res) => {
-          reset({ category: res.data.category })
-          setCreatedAt(res.data.createdAt)
+          reset({ name: res.data.category.name })
+          setCreatedAt(res.data.category.createdAt)
         })
         .catch((err) => console.log(err))
     }
@@ -28,7 +28,7 @@ const AddCategory = () => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/category`)
       .then((res) => {
-        setCategories(res.data)
+        setCategories(res.data.category)
       })
       .catch((err) => console.log(err))
   }, [])
@@ -38,7 +38,7 @@ const AddCategory = () => {
 
     if (!id) {
       const isDuplicate = categories.find((cat) => {
-        return cat.category.toLowerCase() == data.category.toLowerCase()
+        return cat.name.toLowerCase() == data.name.toLowerCase()
       })
 
       if (isDuplicate) {
@@ -54,7 +54,7 @@ const AddCategory = () => {
 
     if (id) {
       // Update Mode
-      const newData = { ...data, createdAt : createdAt, updatedAt: new Date()}
+      const newData = { name: data.name }
       axios
         .put(`${import.meta.env.VITE_API_URL}/category/${id}`, newData)
         .then(() => {
@@ -64,7 +64,7 @@ const AddCategory = () => {
         .catch((err) => console.log(err))
     } else {
       // Add Mode
-      const newData = { ...data, createdAt: new Date() }
+      const newData = { name: data.name }
       axios
         .post(`${import.meta.env.VITE_API_URL}/category`, newData)
         .then(() => {
@@ -84,7 +84,7 @@ const AddCategory = () => {
           <div className="mt-4">
             <input
               type="text"
-              {...register('category', {
+              {...register('name', {
                 required: {
                   value: true,
                   message: 'Enter The Category Name',
@@ -101,10 +101,10 @@ const AddCategory = () => {
               placeholder="Enter Category Name"
               className="form-control"
             />
-            <p className="text-danger">{errors?.category?.message}</p>
+            <p className="text-danger">{errors?.name?.message}</p>
           </div>
           <div className="mt-4">
-            <button className={`btn ${id ? 'btn-outline-warning' : 'btn-outline-success'}`}>
+            <button type="submit" className={`btn ${id ? 'btn-outline-warning' : 'btn-outline-success'}`}>
               {id ? 'Update' : 'Submit'}
             </button>
             <ToastContainer />

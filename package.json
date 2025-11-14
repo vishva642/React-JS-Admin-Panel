@@ -6,7 +6,7 @@
     "client": "cd client && npm start",
     "server": "cd server && npm start",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "start": "concurrently \"npm run dev\" \"npx json-server db.json --port 5000 \""
+    "start": "concurrently \"npm run dev\""
   },
   "keywords": [],
   "author": "",

@@ -30,14 +30,15 @@ const WidgetsDropdown = (props) => {
       try {
         const [catRes, subRes, prodRes] = await Promise.all([
           axios.get(`${import.meta.env.VITE_API_URL}/category`),
-          axios.get(`${import.meta.env.VITE_API_URL}/subcategory`),
+          axios.get(`${import.meta.env.VITE_API_URL}/subCategory`),
           axios.get(`${import.meta.env.VITE_API_URL}/product`),
         ])
 
-        const categories = catRes.data.length
-        const subcategories = subRes.data.length
-        const products = prodRes.data.length
-        const invests = prodRes.data.reduce((acc, item) => acc + (Number(item.p_price) || 0), 0)
+        const categories = catRes.data.category?.length || 0
+        const subcategories = subRes.data.records?.length || 0
+        const productsData = prodRes.data.records || []
+        const products = productsData.length
+        const invests = productsData.reduce((acc, item) => acc + (Number(item.p_price) || 0), 0)
         setCounts({ categories, subcategories, products, invests })
       } catch (err) {
         console.error(err)

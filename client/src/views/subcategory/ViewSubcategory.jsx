@@ -87,12 +87,12 @@ const ViewSubcategory = () => {
   function showSubcategory(){
     axios
       .get(`${import.meta.env.VITE_API_URL}/category`)
-      .then((res) => setCategories(res.data))
+      .then((res) => setCategories(res.data.category))
       .catch((err) => console.log(err))
 
     axios
       .get(`${import.meta.env.VITE_API_URL}/subcategory`)
-      .then((res) => setSubCategories(res.data))
+      .then((res) => setSubCategories(res.data.records))
       .catch((err) => console.log(err))
   }
   // Category aur SubCategory dono load karna
@@ -106,16 +106,16 @@ const ViewSubcategory = () => {
             axios.delete(`${import.meta.env.VITE_API_URL}/subcategory/${id}`)
             .then(res=>{
                 console.log(res.data)
+                showSubcategory()
             })
             .catch(err=>console.log(err))
         }
-        showSubcategory()
     }
 
   // Helper: categoryId → categoryName
   function getCategoryName(id) {
-    const cat = categories.find((c) => c.id === id)
-    return cat ? cat.category : 'Unknown'
+    const cat = categories.find((c) => c._id === id)
+    return cat ? cat.name : 'Unknown'
   }
 
   return (
@@ -134,18 +134,18 @@ const ViewSubcategory = () => {
         </thead>
         <tbody>
           {subCategories &&
-            subCategories.map(({ id, categoryId, subcategory, createdAt, updatedAt }, index) => (
-              <tr key={id}>
+            subCategories.map(({ _id, cat_id, sub_cat, createdAt, updatedAt }, index) => (
+              <tr key={_id}>
                 <td>{index + 1}</td>
-                <td>{getCategoryName(categoryId)?? "N/A"}</td>
-                <td>{subcategory}</td>
+                <td>{getCategoryName(cat_id?._id ?? cat_id)?? "N/A"}</td>
+                <td>{sub_cat}</td>
                 <td>{createdAt ? new Date(createdAt).toDateString() : '-'}</td>
                 <td>{updatedAt ? new Date(updatedAt).toDateString() : '-'}</td>
                 <td>
-                  <button onClick={() => trash(id)} className="btn btn-danger mx-1">
+                  <button onClick={() => trash(_id)} className="btn btn-danger mx-1">
                     <FaTrash />
                   </button>
-                  <NavLink to={`/subcategory/update/${id}`} className="btn btn-warning">
+                  <NavLink to={`/subcategory/update/${_id}`} className="btn btn-warning">
                     <FaPencil />
                   </NavLink>
                 </td>
